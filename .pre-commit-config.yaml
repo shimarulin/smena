@@ -1,0 +1,13 @@
+# "pre-commit install" sets up both stages: check-branch on pre-commit,
+# check-message on commit-msg.
+default_install_hook_types: [pre-commit, commit-msg]
+
+repos:
+  - repo: https://github.com/commit-check/commit-check
+    # pre-commit builds the hook environment from this repository itself (~/.cache/pre-commit)
+    # and does not use the commit-check copy from mise.toml, which only serves the skill CLI.
+    # Keep rev equal to pypi:commit-check.
+    rev: v2.25.0
+    hooks:
+      - id: check-message
+      - id: check-branch

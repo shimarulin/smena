@@ -1,0 +1,26 @@
+# Git policy: https://commit-check.com/configuration/
+# Commits follow Conventional Commits 1.0.0, branches follow Conventional Branch 1.1.0.
+
+[commit]
+# Same as the default; written out explicitly.
+allow_commit_types = [
+  "feat", "fix", "build", "chore", "ci", "docs", "perf", "refactor", "style", "test", "revert",
+]
+# Description in the imperative mood ("add", not "added").
+subject_imperative = true
+
+[branch]
+conventional_branch = true
+# The description after <type>/ follows the spec grammar strictly: [a-z0-9],
+# dots inside a word, single hyphens between words.
+require_description_grammar = true
+# Types of spec 1.1.0. The default is wider: it also allows build, ci, docs,
+# perf, refactor, test, style, agents, dependabot, renovate.
+allow_branch_types = [
+  "feature", "feat",
+  "bugfix", "fix",
+  "hotfix",
+  "release",
+  "chore",
+  "ai", "claude", "codex", "copilot", "cursor",
+]

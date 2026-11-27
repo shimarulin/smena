@@ -1,0 +1,10 @@
+[tools]
+# Interpreter for the tool environments below.
+python = "3.14.10"
+# Installer for pypi:* tools: mise installs them only through uv or pipx.
+uv = "0.13.10"
+"pypi:pre-commit" = "4.7.0"
+# CLI for the commit-check skill: checks a draft message before git commit.
+# The hooks do not use this copy: pre-commit builds its own environment from
+# rev in .pre-commit-config.yaml. Keep the versions equal.
+"pypi:commit-check" = "2.25.0"
