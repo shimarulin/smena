@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "skills": {
+    "commit-check": {
+      "source": "commit-check/commit-check",
+      "commit": "145bc187430e7e70c389690f3bf0e19ee01cf62e",
+      "sourceType": "github",
+      "skillPath": "skills/commit-check/SKILL.md",
+      "computedHash": "98360e7633a396dccf3017a86f18f70b77736d4a28defd396eb5aa19bfff8e82"
+    }
+  }
+}
