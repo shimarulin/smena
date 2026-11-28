@@ -14,13 +14,14 @@ conventional_branch = true
 # The description after <type>/ follows the spec grammar strictly: [a-z0-9],
 # dots inside a word, single hyphens between words.
 require_description_grammar = true
-# Types of spec 1.1.0. The default is wider: it also allows build, ci, docs,
-# perf, refactor, test, style, agents, dependabot, renovate.
+# Branch types: only the spec's full names. Removed from the spec's list:
+# the feat/fix aliases, the vendor prefixes claude, codex, copilot, cursor,
+# and the ai prefix. The default is wider still: it also allows build, ci,
+# docs, perf, refactor, test, style, agents, dependabot, renovate.
 allow_branch_types = [
-  "feature", "feat",
-  "bugfix", "fix",
+  "feature",
+  "bugfix",
   "hotfix",
   "release",
   "chore",
-  "ai", "claude", "codex", "copilot", "cursor",
 ]
